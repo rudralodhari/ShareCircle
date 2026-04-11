@@ -1,0 +1,70 @@
+/* ============================================================
+   ShareCircle — Global Styles (index.css)
+   ============================================================ */
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Layout */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-body);
+  transition: background-color var(--transition-base);
+}
+
+.main-content {
+  flex: 1;
+  background-color: var(--bg-body);
+  transition: background-color var(--transition-base);
+}
+
+/* Page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+
+/* Toast / notification styles */
+.sc-toast {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-toast);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--primary-500);
+  animation: slideUp var(--transition-base) ease-out;
+}
+
+/* Empty state */
+.sc-empty-state {
+  text-align: center;
+  padding: var(--space-16) var(--space-6);
+}
+
+.sc-empty-state i {
+  font-size: 3rem;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-4);
+}
+
+.sc-empty-state h5 {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.sc-empty-state p {
+  color: var(--text-tertiary);
+  max-width: 360px;
+  margin: 0 auto;
+}
